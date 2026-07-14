@@ -1,0 +1,133 @@
+.custom-navbar{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    z-index: 1000;
+}
+
+.nav-inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+
+.navbar-brand{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.logo{
+    width: 120px;
+    height: 45px;
+    object-fit: contain;
+    display: block;
+}
+
+/* Hide the extra text because it is already inside the logo */
+.brand{
+    display: none;
+}
+
+.nav-collapse{
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    gap:32px;
+    flex:1;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:28px;
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+.nav-link{
+    text-decoration:none;
+    font-weight:600;
+    color:var(--text);
+    transition:.3s;
+}
+
+.nav-link:hover,
+.nav-link.active{
+    color:var(--ink-soft);
+}
+
+.nav-actions{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.nav-toggle{
+    display:none;
+}
+
+@media (max-width:900px){
+
+.nav-toggle{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:5px;
+    background:none;
+    border:none;
+    cursor:pointer;
+}
+
+.nav-toggle span{
+    width:24px;
+    height:2px;
+    background:#222;
+}
+
+.nav-collapse{
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+    background:#fff;
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .3s ease;
+    border-bottom:1px solid #eee;
+}
+
+.nav-collapse.open{
+    max-height:500px;
+}
+
+.nav-links{
+    flex-direction:column;
+    gap:18px;
+    padding:20px;
+}
+
+.nav-actions{
+    flex-direction:column;
+    padding:0 20px 20px;
+}
+
+.nav-actions a,
+.nav-actions button{
+    width:100%;
+}
+
+.logo{
+    width:95px;
+    height:38px;
+}
+}

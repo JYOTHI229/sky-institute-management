@@ -1,0 +1,280 @@
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{
+  padding:90px 0 120px;
+  background:
+    radial-gradient(ellipse 900px 500px at 85% -10%, rgba(227,162,60,.10), transparent),
+    radial-gradient(ellipse 700px 500px at -5% 30%, rgba(76,134,201,.08), transparent),
+    var(--paper);
+}
+
+.hero-title{
+  font-size:56px;
+  font-weight:600;
+  color:var(--ink);
+  margin:20px 0 24px;
+}
+
+.hero-title-accent{
+  color:var(--dawn-dark);
+  font-style:italic;
+}
+
+.hero-copy{
+  font-size:18px;
+  line-height:1.7;
+  color:var(--text-light);
+  margin-bottom:36px;
+  max-width:480px;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
+.hero-visual{
+  position:relative;
+  padding:20px 20px 70px;
+}
+
+.hero-image{
+  width:100%;
+  border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-lg);
+  object-fit:cover;
+  aspect-ratio:4/3;
+}
+
+/* The signature "boarding pass" card, overlapping the hero image */
+.hero-ticket{
+  --ticket-notch-top:50%;
+  position:absolute;
+  left:36px;
+  right:36px;
+  bottom:0;
+  padding:22px 24px;
+  transform:translateY(35%);
+}
+
+.hero-ticket-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+}
+
+.hero-ticket-code{
+  font-family:var(--font-mono);
+  font-size:.78rem;
+  letter-spacing:.05em;
+  color:var(--sky-dark);
+  font-weight:600;
+}
+
+.ticket-stub-divider{
+  margin:16px 0;
+}
+
+.hero-ticket-bottom strong{
+  display:block;
+  font-family:var(--font-display);
+  font-size:1.05rem;
+  color:var(--ink);
+  margin-top:2px;
+}
+
+.hero-ticket-status{
+  font-family:var(--font-mono);
+  font-size:.78rem;
+  font-weight:700;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+  color:var(--success);
+  background:var(--success-soft);
+  padding:6px 14px;
+  border-radius:999px;
+}
+
+/* ============================================================
+   STATS
+   ============================================================ */
+.stats-section{
+  padding:70px 0 90px;
+  background:var(--paper-raised);
+}
+
+.stat-card{
+  background:var(--paper-raised);
+  padding:34px;
+  text-align:center;
+  border-radius:var(--radius);
+  border:1px solid var(--border);
+  transition:var(--transition);
+}
+
+.stat-card:hover{
+  transform:translateY(-6px);
+  box-shadow:var(--shadow-md);
+  border-color:transparent;
+}
+
+.stat-card svg{
+  font-size:32px;
+  color:var(--sky-dark);
+  margin-bottom:16px;
+}
+
+.stat-card h2{
+  font-family:var(--font-mono);
+  font-size:2.2rem;
+  font-weight:600;
+  color:var(--ink);
+}
+
+.stat-card p{
+  color:var(--text-light);
+  font-size:.9rem;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+  margin-top:4px;
+}
+
+/* ============================================================
+   ABOUT
+   ============================================================ */
+.about-home{
+  padding:100px 0;
+  background:var(--paper);
+}
+
+.about-home h2{
+  font-size:38px;
+  font-weight:600;
+  margin:16px 0 22px;
+}
+
+.about-home p{
+  font-size:17px;
+  line-height:1.75;
+  color:var(--text-light);
+  max-width:520px;
+}
+
+.about-image{
+  border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-md);
+  aspect-ratio:4/3;
+  object-fit:cover;
+}
+
+.about-list{
+  list-style:none;
+  margin-top:28px;
+  padding:0;
+  display:grid;
+  gap:14px;
+}
+
+.about-list li{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-size:16px;
+  font-weight:600;
+  color:var(--ink);
+}
+
+.about-list-mark{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:var(--dawn);
+  flex-shrink:0;
+}
+
+/* ============================================================
+   CTA
+   ============================================================ */
+.cta{
+  padding:100px 0;
+  background:var(--ink);
+  color:#fff;
+}
+
+.eyebrow-light{
+  color:var(--dawn);
+}
+
+.eyebrow-light::before{
+  background:var(--dawn);
+}
+
+.cta h2{
+  font-size:42px;
+  font-weight:600;
+  color:#fff;
+  margin:18px 0 14px;
+}
+
+.cta p{
+  font-size:17px;
+  color:rgba(255,255,255,.72);
+  margin-bottom:34px;
+}
+
+.btn-cta-accent{
+  display:inline-flex;
+  background:var(--dawn);
+  color:var(--ink);
+  font-weight:700;
+  padding:16px 36px;
+  border-radius:999px;
+  transition:var(--transition);
+}
+
+.btn-cta-accent:hover{
+  background:#fff;
+  transform:translateY(-3px);
+  box-shadow:var(--shadow-lg);
+}
+
+@media(max-width:992px){
+  .hero{
+    text-align:center;
+    padding-bottom:150px;
+  }
+
+  .hero-title{
+    font-size:38px;
+  }
+
+  .hero-copy{
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .hero-buttons{
+    justify-content:center;
+  }
+
+  .hero-visual{
+    margin-top:50px;
+  }
+
+  .about-home{
+    text-align:center;
+  }
+
+  .about-home p{
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .about-list{
+    justify-items:center;
+  }
+}

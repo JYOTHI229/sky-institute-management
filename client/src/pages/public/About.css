@@ -1,0 +1,165 @@
+.about-hero{
+    padding:100px 0 90px;
+    background:var(--ink);
+    color:#fff;
+    text-align:center;
+}
+
+.eyebrow-center{
+    justify-content:center;
+    color:var(--dawn);
+}
+
+.eyebrow-center::before{
+    background:var(--dawn);
+}
+
+.about-hero h1{
+    font-size:46px;
+    font-weight:600;
+    color:#fff;
+    margin:18px 0 16px;
+    max-width:720px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.about-hero p{
+    font-size:18px;
+    color:rgba(255,255,255,.72);
+    max-width:520px;
+    margin:0 auto;
+}
+
+.about-section{
+    padding:100px 0;
+}
+
+.about-photo{
+    width:100%;
+    border-radius:var(--radius-lg);
+    box-shadow:var(--shadow-md);
+    aspect-ratio:4/3;
+    object-fit:cover;
+}
+
+.about-section h2{
+    font-size:36px;
+    font-weight:600;
+    margin:16px 0 22px;
+    max-width:480px;
+}
+
+.about-section p{
+    color:var(--text-light);
+    line-height:1.75;
+    font-size:17px;
+    max-width:480px;
+}
+
+.mission-section{
+    background:var(--paper-raised);
+    padding:90px 0;
+}
+
+.about-card{
+    background:var(--paper-raised);
+    padding:36px;
+    border-radius:var(--radius);
+    border:1px solid var(--border);
+    text-align:center;
+    transition:var(--transition);
+    height:100%;
+}
+
+.about-card:hover{
+    transform:translateY(-8px);
+    box-shadow:var(--shadow-md);
+    border-color:transparent;
+}
+
+.about-card svg{
+    font-size:30px;
+    color:var(--sky-dark);
+    margin-bottom:18px;
+}
+
+.about-card h3{
+    margin-bottom:12px;
+    font-size:1.2rem;
+}
+
+.about-card p{
+    color:var(--text-light);
+    font-size:.95rem;
+    line-height:1.6;
+}
+
+.about-stats{
+    padding:90px 0;
+    background:var(--paper);
+}
+
+.about-stats h2{
+    font-family:var(--font-mono);
+    font-size:2.4rem;
+    color:var(--ink);
+    font-weight:600;
+}
+
+.about-stats p{
+    color:var(--text-light);
+    font-size:.9rem;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:.04em;
+    margin-top:4px;
+}
+
+.about-cta{
+    background:var(--ink-soft);
+    color:white;
+    padding:90px 0;
+    text-align:center;
+}
+
+.graduate-icon{
+    font-size:44px;
+    margin-bottom:18px;
+    color:var(--dawn);
+}
+
+.about-cta h2{
+    font-size:36px;
+    font-weight:600;
+    color:#fff;
+    margin-bottom:16px;
+}
+
+.about-cta p{
+    font-size:17px;
+    color:rgba(255,255,255,.75);
+    margin-bottom:30px;
+}
+
+@media(max-width:992px){
+
+.about-section{
+    text-align:center;
+}
+
+.about-section p{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.about-hero h1{
+    font-size:34px;
+}
+
+.about-section h2{
+    margin-top:40px;
+    margin-left:auto;
+    margin-right:auto;
+}
+}

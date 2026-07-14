@@ -1,0 +1,259 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:var(--font-body);
+  background:var(--background);
+  color:var(--text);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+
+h1,h2,h3,h4{
+  font-family:var(--font-display);
+  color:var(--ink);
+  line-height:1.15;
+  letter-spacing:-.01em;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+button{
+  cursor:pointer;
+  transition:var(--transition);
+  font-family:var(--font-body);
+}
+
+button:disabled{
+  cursor:not-allowed;
+  opacity:.65;
+}
+
+img{
+  max-width:100%;
+}
+
+:focus-visible{
+  outline:3px solid var(--sky);
+  outline-offset:2px;
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{
+    animation-duration:.001ms !important;
+    transition-duration:.001ms !important;
+  }
+}
+
+.section{
+  padding:90px 0;
+}
+
+.container-xl{
+  max-width:1320px;
+}
+
+/* ============================================================
+   EYEBROW — small tracked label used above headlines
+   ============================================================ */
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-family:var(--font-mono);
+  font-size:.72rem;
+  font-weight:600;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--dawn-dark);
+}
+
+.eyebrow::before{
+  content:"";
+  width:18px;
+  height:2px;
+  background:var(--dawn);
+  display:inline-block;
+}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.btn-solid,
+.btn-outline-brand{
+  font-family:var(--font-body);
+  font-weight:700;
+  font-size:.95rem;
+  padding:14px 28px;
+  border-radius:999px;
+  border:2px solid transparent;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  transition:var(--transition);
+}
+
+.btn-solid{
+  background:var(--ink-soft);
+  color:#fff;
+}
+
+.btn-solid:hover{
+  background:var(--ink);
+  transform:translateY(-2px);
+  box-shadow:var(--shadow-md);
+}
+
+.btn-outline-brand{
+  background:transparent;
+  border-color:var(--ink-soft);
+  color:var(--ink-soft);
+}
+
+.btn-outline-brand:hover{
+  background:var(--ink-soft);
+  color:#fff;
+  transform:translateY(-2px);
+}
+
+/* ============================================================
+   CARD — generic raised surface used across dashboards/forms
+   ============================================================ */
+.surface-card{
+  background:var(--paper-raised);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow-sm);
+  border:1px solid var(--border);
+}
+
+/* ============================================================
+   TICKET / BOARDING-PASS MOTIF
+   Signature element for course + admission cards: a nod to
+   "Sky" Institute and "Learn Today, Lead Tomorrow" as a journey.
+   Perforated edge + dashed divider + monospace flight-style meta.
+   ============================================================ */
+.ticket{
+  position:relative;
+  background:var(--paper-raised);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow-sm);
+  overflow:visible;
+  transition:var(--transition);
+}
+
+.ticket:hover{
+  transform:translateY(-6px);
+  box-shadow:var(--shadow-lg);
+}
+
+.ticket::before,
+.ticket::after{
+  content:"";
+  position:absolute;
+  width:22px;
+  height:22px;
+  background:var(--background);
+  border-radius:50%;
+  top:var(--ticket-notch-top, 158px);
+  z-index:2;
+  box-shadow:inset 0 0 0 1px var(--border);
+}
+
+.ticket::before{ left:-11px; }
+.ticket::after{ right:-11px; }
+
+.ticket-stub-divider{
+  position:relative;
+  height:0;
+  border-top:2px dashed var(--border);
+  margin:0 18px;
+}
+
+.ticket-meta{
+  font-family:var(--font-mono);
+  font-size:.72rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--text-light);
+}
+
+/* ============================================================
+   STATUS BADGES — semantic pill, reused by tables everywhere
+   ============================================================ */
+.pill{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:5px 14px;
+  border-radius:999px;
+  font-family:var(--font-mono);
+  font-size:.75rem;
+  font-weight:600;
+  letter-spacing:.03em;
+  text-transform:uppercase;
+}
+
+.pill.pending,
+.pill::before{
+  content:"";
+}
+
+.pill.pending{ background:var(--warning-soft); color:var(--dawn-dark); }
+.pill.approved{ background:var(--success-soft); color:var(--success); }
+.pill.rejected{ background:var(--danger-soft); color:var(--danger); }
+
+/* ============================================================
+   DATA TABLES — shared shell for admin tables
+   ============================================================ */
+.data-table-shell{
+  background:var(--paper-raised);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow-sm);
+  border:1px solid var(--border);
+  overflow:hidden;
+}
+
+.data-table-shell table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+.data-table-shell thead th{
+  text-align:left;
+  font-family:var(--font-mono);
+  font-size:.72rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--text-light);
+  background:var(--paper);
+  padding:16px 20px;
+  border-bottom:1px solid var(--border);
+}
+
+.data-table-shell tbody td{
+  padding:16px 20px;
+  border-bottom:1px solid var(--border);
+  font-size:.95rem;
+}
+
+.data-table-shell tbody tr:last-child td{
+  border-bottom:none;
+}
+
+.data-table-shell tbody tr{
+  transition:background var(--transition);
+}
+
+.data-table-shell tbody tr:hover{
+  background:#FBFAF7;
+}

@@ -1,0 +1,87 @@
+.btn-custom {
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all .35s ease;
+  font-weight: 600;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Sizes */
+
+.sm {
+  padding: 8px 20px;
+  font-size: .9rem;
+}
+
+.md {
+  padding: 12px 30px;
+  font-size: 1rem;
+}
+
+.lg {
+  padding: 16px 38px;
+  font-size: 1.1rem;
+}
+
+/* Primary */
+
+.primary {
+  background: var(--ink-soft);
+  color: white;
+  box-shadow: 0 10px 25px rgba(16,25,46,.22);
+}
+
+.primary:hover {
+  background: var(--ink);
+  transform: translateY(-4px);
+}
+
+/* Secondary */
+
+.secondary {
+  background: white;
+  border: 2px solid var(--ink-soft);
+  color: var(--ink-soft);
+}
+
+.secondary:hover {
+  background: var(--ink-soft);
+  color: white;
+}
+
+/* Accent — the one bold call-to-action color, use sparingly */
+
+.accent {
+  background: var(--dawn);
+  color: var(--ink);
+  box-shadow: 0 10px 25px rgba(227,162,60,.35);
+}
+
+.accent:hover {
+  background: var(--dawn-dark);
+  transform: translateY(-4px);
+}
+
+/* Danger */
+
+.danger{
+    background:var(--danger);
+    color:white;
+}
+
+/* Success */
+
+.success{
+    background:var(--success);
+    color:white;
+}
+
+.btn-custom:disabled{
+    opacity:.6;
+    cursor:not-allowed;
+}

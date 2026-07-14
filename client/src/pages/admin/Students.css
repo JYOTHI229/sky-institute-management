@@ -1,0 +1,157 @@
+.students-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:24px;
+  flex-wrap:wrap;
+  gap:16px;
+}
+
+.students-header h2{
+  font-size:1.7rem;
+  font-weight:600;
+  color:var(--ink);
+  margin-bottom:2px;
+}
+
+.students-header p{
+  color:var(--text-light);
+  font-size:.88rem;
+}
+
+.add-btn{
+  background:var(--ink-soft);
+  color:white;
+  padding:12px 22px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:700;
+  font-size:.9rem;
+  transition:var(--transition);
+}
+
+.add-btn:hover{
+  background:var(--ink);
+  transform:translateY(-2px);
+  box-shadow:var(--shadow-md);
+}
+
+.search-box{
+  margin-bottom:20px;
+  max-width:360px;
+}
+
+.search-box input{
+  width:100%;
+  padding:12px 18px;
+  border:1.5px solid var(--border);
+  border-radius:999px;
+  font-size:.92rem;
+  outline:none;
+  transition:var(--transition);
+  background:var(--paper-raised);
+  font-family:var(--font-body);
+}
+
+.search-box input:focus{
+  border-color:var(--sky);
+  box-shadow:0 0 0 4px rgba(76,134,201,.12);
+}
+
+.table-card{
+  background:var(--paper-raised);
+  border-radius:var(--radius);
+  border:1px solid var(--border);
+  box-shadow:var(--shadow-sm);
+  overflow-x:auto;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  min-width:600px;
+}
+
+th{
+  background:var(--paper);
+  color:var(--text-light);
+  padding:14px 20px;
+  text-align:left;
+  font-family:var(--font-mono);
+  font-size:.72rem;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+
+td{
+  padding:16px 20px;
+  border-bottom:1px solid var(--border);
+  font-size:.92rem;
+  color:var(--text);
+}
+
+tbody tr:last-child td{
+  border-bottom:none;
+}
+
+tr:hover td{
+  background:#FBFAF7;
+}
+
+.edit-btn{
+  background:var(--success-soft);
+  color:var(--success);
+  padding:7px 14px;
+  border-radius:999px;
+  text-decoration:none;
+  margin-right:8px;
+  font-size:.8rem;
+  font-weight:700;
+  transition:var(--transition);
+  display:inline-block;
+}
+
+.edit-btn:hover{
+  background:var(--success);
+  color:#fff;
+}
+
+.delete-btn{
+  background:var(--danger-soft);
+  color:var(--danger);
+  padding:7px 14px;
+  border:none;
+  border-radius:999px;
+  font-size:.8rem;
+  font-weight:700;
+  transition:var(--transition);
+}
+
+.delete-btn:hover{
+  background:var(--danger);
+  color:#fff;
+}
+
+.empty-state{
+  padding:40px 0;
+  text-align:center;
+  color:var(--text-light);
+}
+
+.delete-btn:disabled,
+.edit-btn:disabled{
+  opacity:.6;
+  cursor:not-allowed;
+}
+
+@media (max-width: 768px){
+  .students-header{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .add-btn{
+    width:100%;
+    text-align:center;
+  }
+}

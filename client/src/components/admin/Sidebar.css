@@ -1,0 +1,162 @@
+.sidebar{
+  position:fixed;
+  left:0;
+  top:0;
+  width:264px;
+  height:100vh;
+  background:var(--ink);
+  color:white;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  padding:28px 16px;
+  box-shadow:var(--shadow-lg);
+  z-index:1000;
+  overflow:hidden;
+}
+
+/* Logo */
+.sidebar-logo{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:40px;
+  padding:0 8px;
+}
+
+.logo-circle{
+  width:42px;
+  height:42px;
+  border-radius:12px;
+  background:var(--dawn);
+  color:var(--ink);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:1.1rem;
+  flex-shrink:0;
+}
+
+.sidebar-logo h4{
+  margin:0;
+  font-family:var(--font-display);
+  font-weight:600;
+  font-size:1.05rem;
+}
+
+.sidebar-logo span{
+  font-size:.68rem;
+  font-family:var(--font-mono);
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  opacity:.55;
+}
+
+/* Menu */
+.sidebar-menu{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+
+.menu-item{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:13px 16px;
+  border-radius:10px;
+  color:rgba(255,255,255,.62);
+  text-decoration:none;
+  font-weight:600;
+  font-size:.92rem;
+  transition:var(--transition);
+  position:relative;
+  border-left:3px solid transparent;
+}
+
+.menu-item svg{
+  font-size:16px;
+}
+
+.menu-item:hover{
+  background:rgba(255,255,255,.06);
+  color:#fff;
+}
+
+.menu-item.active{
+  background:rgba(227,162,60,.12);
+  color:#fff;
+  border-left-color:var(--dawn);
+}
+
+/* Footer */
+.sidebar-footer{
+  margin-top:auto;
+  padding-top:16px;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+
+.logout-btn{
+  width:100%;
+  padding:13px;
+  border:none;
+  border-radius:10px;
+  background:rgba(210,87,75,.15);
+  color:#F3A79E;
+  font-weight:700;
+  font-size:.9rem;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  transition:var(--transition);
+}
+
+.logout-btn:hover{
+  background:var(--danger);
+  color:#fff;
+}
+
+/* Scrollbar */
+.sidebar::-webkit-scrollbar{
+  width:5px;
+}
+
+.sidebar::-webkit-scrollbar-thumb{
+  background:rgba(255,255,255,.15);
+  border-radius:20px;
+}
+
+/* Mobile */
+@media(max-width:992px){
+
+.sidebar{
+  width:76px;
+  padding:20px 10px;
+}
+
+.sidebar-logo h4,
+.sidebar-logo span,
+.menu-item span,
+.logout-btn span{
+  display:none;
+}
+
+.sidebar-logo{
+  justify-content:center;
+  padding:0;
+}
+
+.menu-item{
+  justify-content:center;
+  padding:14px;
+}
+
+.menu-item svg{
+  font-size:19px;
+}
+
+.logout-btn{
+  padding:14px;
+}
+}

@@ -1,0 +1,30 @@
+.profile-page{
+  padding:32px;
+  min-height:100vh;
+}
+
+.profile-page h2{
+  font-size:1.7rem;
+  font-weight:600;
+  color:var(--ink);
+  margin-bottom:20px;
+}
+
+.profile-page .card{
+  background:var(--paper-raised);
+  border:1px solid var(--border);
+  padding:28px;
+  border-radius:var(--radius);
+  max-width:420px;
+  box-shadow:var(--shadow-sm);
+}
+
+.profile-page .card p{
+  padding:10px 0;
+  border-bottom:1px solid var(--border);
+  color:var(--text);
+}
+
+.profile-page .card p:last-child{
+  border-bottom:none;
+}

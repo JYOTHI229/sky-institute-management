@@ -1,0 +1,56 @@
+/* ============================================================
+   SKY INSTITUTE — DESIGN TOKENS
+   A journey metaphor for the brand: "Sky" + "Learn Today, Lead
+   Tomorrow" reads as dawn breaking into flight. Ink-navy anchors
+   the palette, dawn-gold is the one bold accent, sky-blue is used
+   sparingly as the secondary link/accent color.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+:root{
+  /* ---- Brand palette ---- */
+  --ink:#10192E;            /* near-midnight navy — dark surfaces, dark text */
+  --ink-soft:#1B2A52;       /* deep indigo-navy — primary brand color */
+  --paper:#F6F5F1;          /* warm-grey paper background */
+  --paper-raised:#FFFFFF;   /* card surfaces */
+
+  --dawn:#E3A23C;           /* warm dawn-gold — the one bold accent */
+  --dawn-dark:#C9821F;
+  --sky:#4C86C9;            /* muted sky-blue — secondary accent / links */
+  --sky-dark:#356AA6;
+
+  --success:#2F9E6E;
+  --success-soft:#E4F5EE;
+  --danger:#D2574B;
+  --danger-soft:#FBEAE8;
+  --warning:#E3A23C;
+  --warning-soft:#FBF1E1;
+
+  /* ---- Legacy aliases kept so older components still resolve ---- */
+  --primary:var(--ink-soft);
+  --primary-light:var(--sky);
+  --secondary:var(--ink);
+  --accent:var(--dawn);
+  --background:var(--paper);
+  --card:var(--paper-raised);
+  --text:#151C2C;
+  --text-light:#636E82;
+  --border:#E4E1D9;
+
+  /* ---- Elevation ---- */
+  --shadow-sm:0 4px 14px rgba(16,25,46,.06);
+  --shadow-md:0 14px 34px rgba(16,25,46,.10);
+  --shadow-lg:0 26px 60px rgba(16,25,46,.16);
+
+  /* ---- Shape & motion ---- */
+  --radius-sm:10px;
+  --radius:16px;
+  --radius-lg:26px;
+  --transition:.3s cubic-bezier(.4,0,.2,1);
+
+  /* ---- Type ---- */
+  --font-display:'Fraunces', Georgia, serif;
+  --font-body:'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono:'IBM Plex Mono', ui-monospace, monospace;
+}

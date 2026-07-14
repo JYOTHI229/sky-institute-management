@@ -1,0 +1,110 @@
+.admin-form-page{
+  max-width:640px;
+}
+
+.admin-form-card{
+  background:var(--paper-raised);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow-sm);
+  padding:36px 40px;
+}
+
+.admin-form-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:28px;
+  gap:16px;
+}
+
+.admin-form-header h2{
+  font-size:1.5rem;
+  font-weight:600;
+  color:var(--ink);
+  margin:0;
+}
+
+.admin-form-back{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:9px 16px;
+  border-radius:999px;
+  border:1.5px solid var(--border);
+  color:var(--text-light);
+  font-weight:600;
+  font-size:.85rem;
+  transition:var(--transition);
+  white-space:nowrap;
+}
+
+.admin-form-back:hover{
+  border-color:var(--ink-soft);
+  color:var(--ink-soft);
+}
+
+.admin-form-card form{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.admin-form-card label{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  font-size:.85rem;
+  font-weight:600;
+  color:var(--ink);
+}
+
+.admin-form-card input,
+.admin-form-card textarea,
+.admin-form-card select{
+  padding:13px 16px;
+  border-radius:var(--radius-sm);
+  border:1.5px solid var(--border);
+  outline:none;
+  font-size:.95rem;
+  font-family:var(--font-body);
+  background:var(--paper);
+  transition:var(--transition);
+  resize:vertical;
+}
+
+.admin-form-card input:focus,
+.admin-form-card textarea:focus,
+.admin-form-card select:focus{
+  border-color:var(--sky);
+  box-shadow:0 0 0 4px rgba(76,134,201,.12);
+  background:var(--paper-raised);
+}
+
+.admin-form-hint{
+  font-size:.78rem;
+  font-weight:500;
+  color:var(--text-light);
+}
+
+.admin-form-submit{
+  margin-top:8px;
+  height:50px;
+  border:none;
+  border-radius:var(--radius-sm);
+  background:var(--ink-soft);
+  color:white;
+  font-weight:700;
+  font-size:.95rem;
+  transition:var(--transition);
+}
+
+.admin-form-submit:hover:not(:disabled){
+  background:var(--ink);
+  transform:translateY(-2px);
+  box-shadow:var(--shadow-md);
+}
+
+.admin-form-submit.danger-fill{
+  background:var(--danger);
+}

@@ -1,0 +1,128 @@
+.admissions-page h2{
+  font-size:1.7rem;
+  font-weight:600;
+  color:var(--ink);
+  margin-bottom:2px;
+}
+
+.admissions-page p{
+  color:var(--text-light);
+  font-size:.88rem;
+  margin-bottom:24px;
+}
+
+.table-card{
+  background:var(--paper-raised);
+  border-radius:var(--radius);
+  border:1px solid var(--border);
+  box-shadow:var(--shadow-sm);
+  overflow-x:auto;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  min-width:760px;
+}
+
+th{
+  background:var(--paper);
+  color:var(--text-light);
+  padding:14px 20px;
+  text-align:left;
+  font-family:var(--font-mono);
+  font-size:.72rem;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+
+td{
+  padding:16px 20px;
+  border-bottom:1px solid var(--border);
+  font-size:.92rem;
+  color:var(--text);
+}
+
+tbody tr:last-child td{
+  border-bottom:none;
+}
+
+tr:hover td{
+  background:#FBFAF7;
+}
+
+.status{
+  padding:5px 14px;
+  border-radius:999px;
+  font-weight:700;
+  font-size:.76rem;
+  font-family:var(--font-mono);
+  letter-spacing:.03em;
+  text-transform:uppercase;
+}
+
+.status.pending{
+  background:var(--warning-soft);
+  color:var(--dawn-dark);
+}
+
+.status.approved{
+  background:var(--success-soft);
+  color:var(--success);
+}
+
+.status.rejected{
+  background:var(--danger-soft);
+  color:var(--danger);
+}
+
+.approve,
+.reject,
+.delete{
+  color:white;
+  padding:7px 14px;
+  border:none;
+  margin-right:6px;
+  border-radius:999px;
+  cursor:pointer;
+  font-size:.78rem;
+  font-weight:700;
+  transition:var(--transition);
+}
+
+.approve{
+  background:var(--success);
+}
+
+.approve:hover:not(:disabled){
+  background:#268a5f;
+}
+
+.reject{
+  background:var(--dawn);
+  color:var(--ink);
+}
+
+.reject:hover:not(:disabled){
+  background:var(--dawn-dark);
+  color:#fff;
+}
+
+.delete{
+  background:var(--danger);
+}
+
+.delete:hover:not(:disabled){
+  background:#b5473d;
+}
+
+.empty-state{
+  padding:40px 0;
+  text-align:center;
+  color:var(--text-light);
+}
+
+button:disabled{
+  opacity:.55;
+  cursor:not-allowed;
+}

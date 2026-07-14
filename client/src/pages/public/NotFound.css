@@ -1,0 +1,30 @@
+.not-found{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:var(--paper);
+  padding:20px;
+}
+
+.not-found h1{
+  font-size:7rem;
+  font-weight:600;
+  color:var(--ink-soft);
+  line-height:1;
+  margin:10px 0;
+}
+
+.not-found h2{
+  font-size:1.4rem;
+  font-weight:600;
+  color:var(--ink);
+  margin-bottom:10px;
+}
+
+.not-found p{
+  color:var(--text-light);
+  margin-bottom:28px;
+}
